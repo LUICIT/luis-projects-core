@@ -10,11 +10,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "users", uniqueConstraints = {
-        @UniqueConstraint(name = "users_username_un", columnNames = "username"),
-        @UniqueConstraint(name = "users_email_un", columnNames = "email")
-})
+@MappedSuperclass
 public class BaseUserEntity extends AuditableEntity<Long> {
 
     @Serial

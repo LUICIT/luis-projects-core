@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.luicit</groupId>
     <artifactId>luis-projects-core</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <name>luis-projects-core</name>
     <description>Librería base para proyectos Spring Boot API REST</description>
     <url>https://github.com/LUICIT/luis-projects-core</url>

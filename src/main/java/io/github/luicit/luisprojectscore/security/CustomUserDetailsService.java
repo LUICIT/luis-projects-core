@@ -16,9 +16,9 @@ import java.util.Collections;
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final CoreProperties coreProperties;
-    private final BaseUserRepository userRepository;
+    private final BaseUserRepository<? extends BaseUserEntity> userRepository;
 
-    public CustomUserDetailsService(CoreProperties coreProperties, BaseUserRepository userRepository) {
+    public CustomUserDetailsService(CoreProperties coreProperties, BaseUserRepository<? extends BaseUserEntity> userRepository) {
         this.coreProperties = coreProperties;
         this.userRepository = userRepository;
     }

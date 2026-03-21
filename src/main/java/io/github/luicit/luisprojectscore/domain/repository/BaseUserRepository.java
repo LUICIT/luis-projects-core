@@ -4,11 +4,14 @@ import io.github.luicit.luisprojectscore.domain.entity.BaseUserEntity;
 
 import java.util.Optional;
 
-public interface BaseUserRepository extends DatabaseRepository<BaseUserEntity, Long> {
+public interface BaseUserRepository<E extends BaseUserEntity> extends DatabaseRepository<E, Long> {
 
-    Optional<BaseUserEntity> findByEmailAndDeletedAtIsNull(String email);
-    Optional<BaseUserEntity> findByUsernameAndDeletedAtIsNull(String username);
+    Optional<E> findByEmailAndDeletedAtIsNull(String email);
+
+    Optional<E> findByUsernameAndDeletedAtIsNull(String username);
+
     boolean existsByEmailAndDeletedAtIsNull(String email);
+
     boolean existsByUsernameAndDeletedAtIsNull(String username);
 
 }
